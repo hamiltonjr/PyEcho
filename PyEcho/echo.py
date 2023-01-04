@@ -41,6 +41,19 @@ class Echo:
                 words.append(word)
         self.message = " ".join(words)
 
+    def help(self):
+        print("PyEcho 0.1.0 written in 2023.")
+        print("Hamilton G. Jr <hamiltonjr2010@gmail.com>.")
+        print()
+        print("USAGE: echo [FLAGS] [MESAGE]")
+        print("FLAGS:")
+        print("-h, --help Prints help information")
+        print("-V, --version Prints version information")
+
+    def version(self):
+        print("PyEcho 0.1.0 written in 2023.")
+        print("Hamilton G. Jr <hamiltonjr2010@gmail.com>.")
+
 
 if __name__ == "__main__":
     echo = Echo(sys.argv)
@@ -48,14 +61,10 @@ if __name__ == "__main__":
     echo.separate_message()
 
     if "h" in echo.arguments:
-        print("Echo help")
-        print("This command has the following arguments:")
-        print("-h / --help: show this help.")
-        print("-v / --version: how how development this app is.")
+        echo.help()
         sys.exit(NO_ERRORS)
     if "v" in echo.arguments:
-        print("Echo version 1.0 in Python.")
-        print("Written by Hamilton G. Jr.")
+        echo.version()
         sys.exit(NO_ERRORS)
     if "n" in echo.arguments:
         echo.ret = False
