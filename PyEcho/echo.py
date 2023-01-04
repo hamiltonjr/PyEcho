@@ -45,10 +45,13 @@ class Echo:
         print("PyEcho 0.1.0 written in 2023.")
         print("Hamilton G. Jr <hamiltonjr2010@gmail.com>.")
         print()
-        print("USAGE: echo [FLAGS] [MESAGE]")
+        print("USAGE: echo [FLAGS] <TEXT>")
         print("FLAGS:")
         print("-h, --help Prints help information")
-        print("-V, --version Prints version information")
+        print("-n Do not print newline")
+        print("-v, --version Prints version information")
+        print("ARGS:")
+        print("<TEXT>... Input text")
 
     def version(self):
         print("PyEcho 0.1.0 written in 2023.")
